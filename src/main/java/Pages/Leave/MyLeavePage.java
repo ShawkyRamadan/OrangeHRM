@@ -11,6 +11,7 @@ public class MyLeavePage {
     WebDriver myLeaveDriver;
 
     // locators
+    By myLeaveMenu = By.xpath("//a[@class='oxd-topbar-body-nav-tab-item' and contains(text(),'My Leave')]");
     By leaveType = By.xpath("//div[./label[contains(text(), 'Leave Type')]]/following-sibling::div//div[@class='oxd-select-text oxd-select-text--active']");
     By leaveOption = By.xpath("//span[contains(text(), 'CAN - FMLA')]");
     String[] status = {"Rejected ", "Cancelled ", "Scheduled ", "Taken " };
@@ -22,6 +23,7 @@ public class MyLeavePage {
 
 
     // Elements
+    WebElement myLeaveMenuElement;
     WebElement leaveTypeElement;
     WebElement leaveOptionElement;
     WebElement removeStatusButtonElement;
@@ -36,6 +38,11 @@ public class MyLeavePage {
     }
     
     // methods
+    public void navigateMyLeave() {
+        myLeaveMenuElement = myLeaveDriver.findElement(myLeaveMenu);
+        myLeaveMenuElement.click();
+    }
+
     private void SelectLeaveType() {
         leaveTypeElement = myLeaveDriver.findElement(leaveType);
         leaveTypeElement.click();

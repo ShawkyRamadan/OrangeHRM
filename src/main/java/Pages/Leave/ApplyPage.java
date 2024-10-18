@@ -16,6 +16,8 @@ public class ApplyPage {
     WebDriver applyDriver;
 
     // Locators
+    By leaveMenu = By.xpath("//a[@class='oxd-main-menu-item'][.//span[text()='Leave']]");
+    By applyMenu = By.xpath("//a[@class='oxd-topbar-body-nav-tab-item' and contains(text(),'Apply')]");
     By leaveType = By.xpath("//div[./label[contains(text(), 'Leave Type')]]/following-sibling::div//div[@class='oxd-select-text oxd-select-text--active']");
     By leaveOption = By.xpath("//span[contains(text(), 'CAN - FMLA')]");
     By fromDate = By.xpath("//div[./label[contains(text(), 'From Date')]]/following-sibling::div//div[@class='oxd-date-input']/input[@class='oxd-input oxd-input--active']");
@@ -32,6 +34,8 @@ public class ApplyPage {
 
 
     // Elements
+    WebElement leaveMenuElement;
+    WebElement applyMenuElement;
     WebElement leaveTypeElement;
     WebElement leaveOptionElement;
     WebElement fromDateElement;
@@ -50,6 +54,20 @@ public class ApplyPage {
 
     public ApplyPage(WebDriver driver) {
         applyDriver = driver;
+    }
+
+    public void navigateLeave()
+    {
+        // navigate to the leave module
+        WebElement leaveMenuElement = applyDriver.findElement(leaveMenu);
+        Helper.click(leaveMenuElement);
+    }
+
+    public void navigateApplyLeave()
+    {
+        // navigate to the apply leave page
+        WebElement applyMenuElement = applyDriver.findElement(applyMenu);
+        Helper.click(applyMenuElement);
     }
 
     private void SelectLeaveType() {

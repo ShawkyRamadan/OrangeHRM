@@ -14,6 +14,9 @@ public class AddLeaveEntitlementPage {
     WebDriver addLeaveEntitlementDriver;
 
     // locators
+    By leaveMenu = By.xpath("//a[@class='oxd-main-menu-item'][.//span[text()='Leave']]");
+    By EntitlementMenu = By.xpath("//span[contains(text(), 'Entitlements ')]");
+    By addEntitlementMenu = By.xpath("//a[@role='menuitem' and contains(text(), 'Add Entitlement')]");
     By addToMultipleEmployee = By.xpath("//label[./input[@value='1']]");
     By leaveType = By.xpath("//div[./label[contains(text(), 'Leave Type')]]/following-sibling::div//div[@class='oxd-select-text oxd-select-text--active']");
     By leaveOption = By.xpath("//span[contains(text(), 'CAN - FMLA')]");
@@ -25,6 +28,9 @@ public class AddLeaveEntitlementPage {
 
 
     // Elements
+    WebElement leaveMenuElement;
+    WebElement EntitlementMenuElement;
+    WebElement addEntitlementMenuElement;
     WebElement addToEmployeeElement;
     WebElement leaveTypeElement;
     WebElement leaveOptionElement;
@@ -40,6 +46,23 @@ public class AddLeaveEntitlementPage {
     }
 
     // methods
+    public void navigateLeave()
+    {
+        // navigate to the leave module
+        WebElement leaveMenuElement = addLeaveEntitlementDriver.findElement(leaveMenu);
+        Helper.click(leaveMenuElement);
+    }
+
+    public void navigateAddLeaveEntitlement()
+    {
+        // navigate to the add leave entitlement page
+        EntitlementMenuElement = addLeaveEntitlementDriver.findElement(EntitlementMenu);
+        Helper.click(EntitlementMenuElement);
+        addEntitlementMenuElement = addLeaveEntitlementDriver.findElement(addEntitlementMenu);
+        Helper.click(addEntitlementMenuElement);
+    }
+
+
     private void selectAddToMultipleEmployee() {
         addToEmployeeElement = addLeaveEntitlementDriver.findElement(addToMultipleEmployee);
         Helper.wait(addLeaveEntitlementDriver, 5);
