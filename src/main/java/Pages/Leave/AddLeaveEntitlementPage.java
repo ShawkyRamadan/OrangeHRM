@@ -14,7 +14,6 @@ public class AddLeaveEntitlementPage {
     WebDriver addLeaveEntitlementDriver;
 
     // locators
-    By leaveMenu = By.xpath("//a[@class='oxd-main-menu-item'][.//span[text()='Leave']]");
     By EntitlementMenu = By.xpath("//span[contains(text(), 'Entitlements ')]");
     By addEntitlementMenu = By.xpath("//a[@role='menuitem' and contains(text(), 'Add Entitlement')]");
     By addToMultipleEmployee = By.xpath("//label[./input[@value='1']]");
@@ -28,7 +27,6 @@ public class AddLeaveEntitlementPage {
 
 
     // Elements
-    WebElement leaveMenuElement;
     WebElement EntitlementMenuElement;
     WebElement addEntitlementMenuElement;
     WebElement addToEmployeeElement;
@@ -46,13 +44,6 @@ public class AddLeaveEntitlementPage {
     }
 
     // methods
-    public void navigateLeave()
-    {
-        // navigate to the leave module
-        WebElement leaveMenuElement = addLeaveEntitlementDriver.findElement(leaveMenu);
-        Helper.click(leaveMenuElement);
-    }
-
     public void navigateAddLeaveEntitlement()
     {
         // navigate to the add leave entitlement page
@@ -71,13 +62,10 @@ public class AddLeaveEntitlementPage {
 
     private void SelectLeaveType() {
         leaveTypeElement = addLeaveEntitlementDriver.findElement(leaveType);
-        Helper.wait(addLeaveEntitlementDriver, 5);
         Helper.click(leaveTypeElement);
         leaveOptionElement = addLeaveEntitlementDriver.findElement(leaveOption);
-        WebDriverWait wait = new WebDriverWait(addLeaveEntitlementDriver, Duration.ofSeconds(10));
-        // Wait for the leaveOption to be clickable
-        WebElement option = wait.until(ExpectedConditions.elementToBeClickable(leaveOptionElement));
-        option.click();
+        // wait for the leaveOption to be clickable
+        Helper.waitForElementToBeClickable(addLeaveEntitlementDriver, leaveOptionElement, 10).click();
     }
 
     private void enterEntitlement(String entitlementText) {

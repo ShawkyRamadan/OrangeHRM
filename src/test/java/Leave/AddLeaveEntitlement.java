@@ -2,6 +2,7 @@ package Leave;
 
 import BaseTest.BaseTest;
 import Pages.Leave.AddLeaveEntitlementPage;
+import Pages.NavBar.Navbar;
 import io.qameta.allure.Issue;
 import io.qameta.allure.Owner;
 import org.testng.Assert;
@@ -10,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class AddLeaveEntitlement extends BaseTest {
     AddLeaveEntitlementPage addLeaveEntitlementPage;
-
+    Navbar navbar;
     // Messages
     String SuccessMessage = "Success";
 
@@ -30,7 +31,8 @@ public class AddLeaveEntitlement extends BaseTest {
     public void navigateAddLeaveEntitlement()
     {
         addLeaveEntitlementPage = new AddLeaveEntitlementPage(driver);
-        addLeaveEntitlementPage.navigateLeave();
+        navbar = new Navbar(driver);
+        navbar.navigateLeave();
         addLeaveEntitlementPage.navigateAddLeaveEntitlement();
     }
 

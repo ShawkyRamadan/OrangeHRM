@@ -3,6 +3,7 @@ package Leave;
 import Pages.Leave.ApplyPage;
 import BaseTest.BaseTest;
 import Pages.Leave.MyLeavePage;
+import Pages.NavBar.Navbar;
 import TestHelpers.Helper;
 import io.qameta.allure.Issue;
 import io.qameta.allure.Owner;
@@ -13,6 +14,7 @@ import org.testng.annotations.*;
 public class Apply extends BaseTest {
     ApplyPage applyPage;
     MyLeavePage myLeavePage;
+    Navbar navbar;
 
 
     // Messages
@@ -36,13 +38,14 @@ public class Apply extends BaseTest {
     @Owner("Abdelrhman")
     @Issue("https://ahmed22968337.atlassian.net/browse/DEPI235-379")
     @Test(  testName = "TC-1",
-            dependsOnMethods = {"Login.LogainPageTest.validLoginPageTest"},
+            dependsOnMethods = {"Login.LoginPageTest.validLoginPageTest"},
             description = "This test will navigate to the apply leave page"
     )
     public void navigateApplyLeave()
     {
         applyPage = new ApplyPage(driver);
-        applyPage.navigateLeave();
+        navbar = new Navbar(driver);
+        navbar.navigateLeave();
         applyPage.navigateApplyLeave();
 
     }
@@ -80,7 +83,7 @@ public class Apply extends BaseTest {
 
     @Owner("Abdelrhman")
     @Test(  testName = "TC-4",
-            dependsOnMethods = {"Login.LogainPageTest.validLoginPageTest"},
+            dependsOnMethods = {"Login.LoginPageTest.validLoginPageTest"},
             description = "This test will navigate to the my leave page"
     )
     public void navigateMyLeave() {

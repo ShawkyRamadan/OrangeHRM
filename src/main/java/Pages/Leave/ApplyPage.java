@@ -1,22 +1,18 @@
 package Pages.Leave;
 
+
 import TestHelpers.Helper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-
-import java.time.Duration;
 
 
 public class ApplyPage {
+    // Driver
     WebDriver applyDriver;
 
     // Locators
-    By leaveMenu = By.xpath("//a[@class='oxd-main-menu-item'][.//span[text()='Leave']]");
     By applyMenu = By.xpath("//a[@class='oxd-topbar-body-nav-tab-item' and contains(text(),'Apply')]");
     By leaveType = By.xpath("//div[./label[contains(text(), 'Leave Type')]]/following-sibling::div//div[@class='oxd-select-text oxd-select-text--active']");
     By leaveOption = By.xpath("//span[contains(text(), 'CAN - FMLA')]");
@@ -34,7 +30,6 @@ public class ApplyPage {
 
 
     // Elements
-    WebElement leaveMenuElement;
     WebElement applyMenuElement;
     WebElement leaveTypeElement;
     WebElement leaveOptionElement;
@@ -51,34 +46,25 @@ public class ApplyPage {
     WebElement messageCloseElement;
 
 
-
+    // Constructor
     public ApplyPage(WebDriver driver) {
         applyDriver = driver;
     }
 
-    public void navigateLeave()
-    {
-        // navigate to the leave module
-        WebElement leaveMenuElement = applyDriver.findElement(leaveMenu);
-        Helper.click(leaveMenuElement);
-    }
-
+    // Methods
     public void navigateApplyLeave()
     {
         // navigate to the apply leave page
-        WebElement applyMenuElement = applyDriver.findElement(applyMenu);
+        applyMenuElement = applyDriver.findElement(applyMenu);
         Helper.click(applyMenuElement);
     }
 
     private void SelectLeaveType() {
         leaveTypeElement = applyDriver.findElement(leaveType);
-        Helper.wait(applyDriver, 5);
         Helper.click(leaveTypeElement);
         leaveOptionElement = applyDriver.findElement(leaveOption);
-        WebDriverWait wait = new WebDriverWait(applyDriver, Duration.ofSeconds(10));
-        // Wait for the leaveOption to be clickable
-        WebElement option = wait.until(ExpectedConditions.elementToBeClickable(leaveOptionElement));
-        option.click();
+        // wait for the leaveOption to be clickable
+        Helper.waitForElementToBeClickable(applyDriver, leaveOptionElement, 10).click();
 
     }
 
@@ -103,22 +89,17 @@ public class ApplyPage {
         Helper.click(partialDaysElement);
 
         partialDaysOptionElement = applyDriver.findElement(partialDaysOption);
-        WebDriverWait wait = new WebDriverWait(applyDriver, Duration.ofSeconds(10));
-        // Wait for the option to be clickable
-        WebElement option = wait.until(ExpectedConditions.elementToBeClickable(partialDaysOptionElement));
-        option.click();
+        // wait for the partialDaysOption to be clickable
+        Helper.waitForElementToBeClickable(applyDriver, partialDaysOptionElement, 10).click();
 
     }
 
     private void SelectDuration() {
-        WebDriverWait wait = new WebDriverWait(applyDriver, Duration.ofSeconds(10));
         durationElement = applyDriver.findElement(duration);
-        WebElement duration = wait.until(ExpectedConditions.elementToBeClickable(durationElement));
-        Helper.click(duration);
+        Helper.click(durationElement);
         durationOptionElement = applyDriver.findElement(durationOption);
-        // Wait for the option to be clickable
-        WebElement option = wait.until(ExpectedConditions.elementToBeClickable(durationOptionElement));
-        option.click();
+        // wait for the durationOption to be clickable
+        Helper.waitForElementToBeClickable(applyDriver, durationOptionElement, 10).click();
     }
 
     private void SetComment(String commentText) {

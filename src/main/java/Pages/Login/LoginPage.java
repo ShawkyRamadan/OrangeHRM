@@ -40,7 +40,6 @@ public class LoginPage
             loginDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
             userNameElement=loginDriver.findElement(userName);
             loginDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
             Helper.clear(userNameElement);
             Helper.sendKeys(userNameElement,userNameText);
 
@@ -54,12 +53,9 @@ public class LoginPage
             Helper.clear(passwordElement);
             Helper.sendKeys(passwordElement,passwordText);
 
-
-
-
         }
 
-        public DashboardPage cliclOnLoginButton()
+        public DashboardPage clickOnLoginButton()
         {
             loginButtonElement= loginDriver.findElement(loginButton);
             Helper.click(loginButtonElement);
