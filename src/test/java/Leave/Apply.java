@@ -4,6 +4,7 @@ import Pages.Leave.ApplyPage;
 import BaseTest.BaseTest;
 import Pages.Leave.MyLeavePage;
 import TestHelpers.Helper;
+import io.qameta.allure.Issue;
 import io.qameta.allure.Owner;
 import org.testng.Assert;
 import org.testng.annotations.*;
@@ -33,6 +34,7 @@ public class Apply extends BaseTest {
     }
 
     @Owner("Abdelrhman")
+    @Issue("https://ahmed22968337.atlassian.net/browse/DEPI235-379")
     @Test(  testName = "TC-1",
             dependsOnMethods = {"Login.LogainPageTest.validLoginPageTest"},
             description = "This test will navigate to the apply leave page"
@@ -62,6 +64,7 @@ public class Apply extends BaseTest {
 
 
     @Owner("Abdelrhman")
+    @Issue("https://ahmed22968337.atlassian.net/browse/DEPI235-71")
     @Test(  testName = "TC-3",
             dependsOnMethods = "applyLeave",
             dataProvider = "ApplyLeave", description = "This test will apply for a leave that overlaps with another leave"
@@ -96,9 +99,11 @@ public class Apply extends BaseTest {
         myLeavePage.cancelLeave();
         // check if the message is displayed
         Assert.assertEquals(myLeavePage.getMessage(), cancelLeaveSuccessMessage);
+        myLeavePage.closeMessage();
     }
 
     @Owner("Abdelrhman")
+    @Issue("https://ahmed22968337.atlassian.net/browse/DEPI235-72")
     @Test(  testName = "TC-6",
             dependsOnMethods = {"cancelLeave"},
             dataProvider = "ApplyLeave",

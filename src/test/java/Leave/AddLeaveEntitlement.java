@@ -2,6 +2,7 @@ package Leave;
 
 import BaseTest.BaseTest;
 import Pages.Leave.AddLeaveEntitlementPage;
+import io.qameta.allure.Issue;
 import io.qameta.allure.Owner;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
@@ -21,6 +22,7 @@ public class AddLeaveEntitlement extends BaseTest {
     }
 
     @Owner("Abdelrhman")
+    @Issue("https://ahmed22968337.atlassian.net/browse/DEPI235-379")
     @Test(  testName = "TC-7",
             dependsOnMethods = {"Login.LogainPageTest.validLoginPageTest"},
             description = "This test will navigate to the add leave entitlement page"
@@ -33,6 +35,7 @@ public class AddLeaveEntitlement extends BaseTest {
     }
 
     @Owner("Abdelrhman")
+    @Issue("https://ahmed22968337.atlassian.net/browse/DEPI235-239")
     @Test(  testName = "TC-8",
             dependsOnMethods = "navigateAddLeaveEntitlement",
             description = "This test will add a leave entitlement for all employees"

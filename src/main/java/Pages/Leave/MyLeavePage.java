@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import java.util.List;
 
 public class MyLeavePage {
     // driver
@@ -74,7 +73,6 @@ public class MyLeavePage {
 
     public String getMessage() {
         messageElement = myLeaveDriver.findElement(message);
-        System.out.println(messageElement.getText());
         return messageElement.getText();
     }
 
