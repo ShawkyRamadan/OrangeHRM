@@ -12,7 +12,7 @@ import org.testng.annotations.*;
 
 import java.time.Duration;
 
-public class LogainPageTest extends BaseTest {
+public class LoginPageTest extends BaseTest {
     private LoginPage loginPage;
 
 
@@ -32,7 +32,7 @@ public class LogainPageTest extends BaseTest {
         loginPage.enterUserName(user);
 
         loginPage.enterPassword(pass);
-        loginPage.cliclOnLoginButton();
+        loginPage.clickOnLoginButton();
 
         String expected="Dashboard";
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
