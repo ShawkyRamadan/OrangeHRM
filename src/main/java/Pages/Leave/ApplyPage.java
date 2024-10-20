@@ -13,15 +13,15 @@ public class ApplyPage {
     WebDriver applyDriver;
 
     // Locators
-    By applyMenu = By.xpath("//a[@class='oxd-topbar-body-nav-tab-item' and contains(text(),'Apply')]");
+    By applyMenu = By.xpath("//a[contains(text(),'Apply')]");
     By leaveType = By.xpath("//div[./label[contains(text(), 'Leave Type')]]/following-sibling::div//div[@class='oxd-select-text oxd-select-text--active']");
     By leaveOption = By.xpath("//span[contains(text(), 'CAN - FMLA')]");
-    By fromDate = By.xpath("//div[./label[contains(text(), 'From Date')]]/following-sibling::div//div[@class='oxd-date-input']/input[@class='oxd-input oxd-input--active']");
-    By toDate = By.xpath("//div[./label[contains(text(), 'To Date')]]/following-sibling::div//div[@class='oxd-date-input']/input[@class='oxd-input oxd-input--active']");
-    By toDateIcon = By.xpath("//div[./label[contains(text(), 'To Date')]]/following-sibling::div//div[@class='oxd-date-input']/i");
+    By fromDate = By.xpath("//div[./label[contains(text(), 'From Date')]]/following-sibling::div//div/input");
+    By toDate = By.xpath("//div[./label[contains(text(), 'To Date')]]/following-sibling::div//div/input");
+    By toDateIcon = By.xpath("//div[./label[contains(text(), 'To Date')]]/following-sibling::div//div/i");
     By partialDays = By.xpath("//div[./label[contains(text(), 'Partial Days')]]/following-sibling::div//div[@class='oxd-select-wrapper']");
     By partialDaysOption = By.xpath("//span[contains(text(), 'All Days')]");
-    By duration = By.xpath("//div[./label[contains(text(), 'Duration')]]/following-sibling::div//div[@class='oxd-select-text oxd-select-text--active']/div");
+    By duration = By.xpath("//div[./label[contains(text(), 'Duration')]]/following-sibling::div//div/div[@class='oxd-select-text-input']");
     By durationOption = By.xpath("//span[contains(text(), 'Specify Time')]");
     By comment = By.xpath("//textarea");
     By applyButton = By.xpath("//button[@type='submit']");

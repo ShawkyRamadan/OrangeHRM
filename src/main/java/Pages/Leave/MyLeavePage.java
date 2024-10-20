@@ -10,11 +10,11 @@ public class MyLeavePage {
     WebDriver myLeaveDriver;
 
     // locators
-    By myLeaveMenu = By.xpath("//a[@class='oxd-topbar-body-nav-tab-item' and contains(text(),'My Leave')]");
+    By myLeaveMenu = By.xpath("//a[contains(text(),'My Leave')]");
     By leaveType = By.xpath("//div[./label[contains(text(), 'Leave Type')]]/following-sibling::div//div[@class='oxd-select-text oxd-select-text--active']");
     By leaveOption = By.xpath("//span[contains(text(), 'CAN - FMLA')]");
     String[] status = {"Rejected ", "Cancelled ", "Scheduled ", "Taken " };
-    By removeStatusButton = By.xpath("//span[@class='oxd-chip oxd-chip--default oxd-multiselect-chips-selected' and contains(text(), '" + status[0] + "')]/i");
+    By removeStatusButton = By.xpath("//span[contains(text(), '" + status[0] + "')]/i");
     By searchButton = By.xpath("//button[@type='submit']");
     By cancelButton = By.xpath("//div[./div[contains(text(),'Leave for vacation')]]/following-sibling::div/div/button");
     By message = By.xpath("//div[@id='oxd-toaster_1']/div/div");
@@ -50,7 +50,7 @@ public class MyLeavePage {
     }
     // function to return the By locator for the status given i
     private By removeStatusButton(int i) {
-        return By.xpath("//span[@class='oxd-chip oxd-chip--default oxd-multiselect-chips-selected' and contains(text(),'" + status[i] + "')]/i");
+        return By.xpath("//span[contains(text(),'" + status[i] + "')]/i");
     }
 
     public void searchByStatus() {

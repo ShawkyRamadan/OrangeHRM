@@ -19,7 +19,7 @@ public class AddLeaveEntitlementPage {
     By addToMultipleEmployee = By.xpath("//label[./input[@value='1']]");
     By leaveType = By.xpath("//div[./label[contains(text(), 'Leave Type')]]/following-sibling::div//div[@class='oxd-select-text oxd-select-text--active']");
     By leaveOption = By.xpath("//span[contains(text(), 'CAN - FMLA')]");
-    By entitlement = By.xpath("//div[@class='oxd-input-group oxd-input-field-bottom-space']/div/input[@class='oxd-input oxd-input--active']");
+    By entitlement = By.xpath("//div[@class='oxd-input-group oxd-input-field-bottom-space']/div/input");
     By saveButton = By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space' and @data-v-da722d4c]");
     By confirmButton = By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space' and @data-v-c94a08c2]");
     By message = By.xpath("//div[@id='oxd-toaster_1']/div/div");
