@@ -77,7 +77,7 @@ public class ApplyPage {
     // format yyyy-dd-mm
     private void SetToDate(String date){
         toDateElement = applyDriver.findElement(toDate);
-        toDateElement.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+        Helper.clear(toDateElement);
         Helper.sendKeys(toDateElement, date);
         toDateIconElement = applyDriver.findElement(toDateIcon);
         Helper.click(toDateIconElement);

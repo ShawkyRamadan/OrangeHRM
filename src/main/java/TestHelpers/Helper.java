@@ -1,5 +1,6 @@
 package TestHelpers;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -22,7 +23,7 @@ public class Helper {
 
     public static void clear(WebElement element)
     {
-        element.clear();
+        element.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
     }
 
     public static WebElement waitForElementToBeClickable(WebDriver driver, WebElement element, int seconds) {

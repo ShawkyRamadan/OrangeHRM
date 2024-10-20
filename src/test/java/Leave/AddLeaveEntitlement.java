@@ -25,7 +25,7 @@ public class AddLeaveEntitlement extends BaseTest {
     @Owner("Abdelrhman")
     @Issue("https://ahmed22968337.atlassian.net/browse/DEPI235-379")
     @Test(  testName = "TC-7",
-            dependsOnMethods = {"Login.LogainPageTest.validLoginPageTest"},
+            dependsOnMethods = {"Login.LoginPageTest.validLoginPageTest"},
             description = "This test will navigate to the add leave entitlement page"
     )
     public void navigateAddLeaveEntitlement()

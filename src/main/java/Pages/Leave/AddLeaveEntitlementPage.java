@@ -70,7 +70,6 @@ public class AddLeaveEntitlementPage {
 
     private void enterEntitlement(String entitlementText) {
         entitlementElement = addLeaveEntitlementDriver.findElement(entitlement);
-        Helper.clear(entitlementElement);
         Helper.sendKeys(entitlementElement, entitlementText);
     }
 
