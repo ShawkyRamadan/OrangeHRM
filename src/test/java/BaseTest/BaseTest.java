@@ -8,13 +8,14 @@ import org.testng.annotations.BeforeClass;
 
 public class BaseTest {
     protected static WebDriver driver;
+    String URL = "https://opensource-demo.orangehrmlive.com/";
 
     @BeforeClass
     public void setUp() {
         if (driver == null) {
             driver = new ChromeDriver();
             driver.manage().window().maximize();
-            driver.get("https://opensource-demo.orangehrmlive.com/");
+            driver.get(URL);
         }
     }
 
