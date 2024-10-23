@@ -14,12 +14,6 @@ public class CustomFieldTest extends BaseTest {
     private Navbar navbar;
     private CustomFieldPage CustomFieldPage;
 
-    @BeforeTest
-    public void setUp() {
-        super.setUp();
-        navbar = new Navbar(driver);
-        CustomFieldPage = new CustomFieldPage(driver);
-    }
 
     @Owner("Nouran")
     @Issue("https://ahmed22968337.atlassian.net/browse/DEPI235-379")
@@ -29,6 +23,8 @@ public class CustomFieldTest extends BaseTest {
             description = "This test will Verify that admin can navigate to custom field"
     )
     public void navigateToAddCustomField() {
+        navbar = new Navbar(driver);
+        CustomFieldPage = new CustomFieldPage(driver);
         navbar.navigatePIM();
         CustomFieldPage.NavigateToAddCustomField();
     }

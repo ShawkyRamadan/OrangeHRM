@@ -14,13 +14,6 @@ public class ReportsTest extends BaseTest {
     private Navbar navbar;
     private ReportsPage reportsPage;
 
-    @BeforeTest
-    public void setUp() {
-        super.setUp();
-        navbar = new Navbar(driver);
-        reportsPage = new ReportsPage(driver);
-    }
-
     @Owner("Nouran")
     @Issue("https://ahmed22968337.atlassian.net/browse/DEPI235-379")
     @Test(
@@ -29,6 +22,8 @@ public class ReportsTest extends BaseTest {
             description = "This test will Verify that admin can navigate to Reports"
     )
     public void navigateToReports() {
+        navbar = new Navbar(driver);
+        reportsPage = new ReportsPage(driver);
         navbar.navigatePIM();
         reportsPage.NavigateToReportPage();
     }

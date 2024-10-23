@@ -3,16 +3,12 @@ package Dashboard;
 import BaseTest.BaseTest;
 import Pages.Dashboard.DashboardPage;
 import Pages.NavBar.Navbar;
-import io.qameta.allure.Owner;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class DashboardTest extends BaseTest {
     DashboardPage dashboardPage;
     Navbar navbar;
 
-    @BeforeTest
-    public void setUpDashboard() {super.setUp();}
 
     @Test(dependsOnMethods = "Login.LoginPageTest.validLoginPageTest")
     public void NavigateToDashboard()

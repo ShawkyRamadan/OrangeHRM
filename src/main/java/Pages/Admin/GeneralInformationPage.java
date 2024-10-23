@@ -11,7 +11,6 @@ public class GeneralInformationPage
     WebDriver GeneralInformationDriver;
 
     // Locators
-    /* Organization Page */
     By Organization = By.xpath("//li[@class='oxd-topbar-body-nav-tab --parent']//span[contains(text(),'Organization')]");
     By GeneralInformation = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'General Information')]");
     By EditButton = By.xpath("//span[@class='oxd-switch-input oxd-switch-input--active --label-left']");

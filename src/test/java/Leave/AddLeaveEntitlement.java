@@ -6,7 +6,6 @@ import Pages.NavBar.Navbar;
 import io.qameta.allure.Issue;
 import io.qameta.allure.Owner;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class AddLeaveEntitlement extends BaseTest {
@@ -16,11 +15,6 @@ public class AddLeaveEntitlement extends BaseTest {
     String SuccessMessage = "Success";
 
 
-    @BeforeTest
-    public void setUpAddLeaveEntitlementPage()
-    {
-        super.setUp();
-    }
 
     @Owner("Abdelrhman")
     @Issue("https://ahmed22968337.atlassian.net/browse/DEPI235-379")

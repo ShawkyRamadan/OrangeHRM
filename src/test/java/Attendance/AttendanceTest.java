@@ -18,13 +18,8 @@ public class AttendanceTest extends BaseTest {
     String successMessage = "Success\nSuccessfully Saved";
 
 
-    @BeforeTest
-    public void setupPunchInOut(){
-        super.setUp();
-    }
-
     @Owner("Abdelrhman")
-    @Test(  testName = "TC-1",
+    @Test(  testName = "TC-Navigate Punch In/Out",
             description = "This test will navigate to the punch in/out page",
             dependsOnMethods = {"Login.LoginPageTest.validLoginPageTest"}
     )
@@ -36,7 +31,7 @@ public class AttendanceTest extends BaseTest {
     }
 
     @Owner("Abdelrhman")
-    @Test(  testName = "TC-2",
+    @Test(  testName = "TC-Punch In",
             dependsOnMethods = "navigatePunchInOut",
             description = "This test will punch in"
     )
@@ -48,7 +43,7 @@ public class AttendanceTest extends BaseTest {
     }
 
     @Owner("Abdelrhman")
-    @Test(  testName = "TC-3",
+    @Test(  testName = "TC-Punch Out",
             dependsOnMethods = "punchIn",
             description = "This test will punch out"
     )
@@ -59,7 +54,7 @@ public class AttendanceTest extends BaseTest {
     }
 
     @Owner("Abdelrhman")
-    @Test(  testName = "TC-4",
+    @Test(  testName = "TC-Navigate My Records",
             dependsOnMethods = "punchOut",
             description = "This test will navigate to my records page"
     )
@@ -69,7 +64,7 @@ public class AttendanceTest extends BaseTest {
     }
 
     @Owner("Abdelrhman")
-    @Test(  testName = "TC-5",
+    @Test(  testName = "TC-Check Records",
             dependsOnMethods = "navigateToMyRecords",
             description = "This test will check the records"
     )

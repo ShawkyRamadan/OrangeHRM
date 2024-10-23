@@ -16,6 +16,7 @@ public class Navbar {
     By timeModule = By.xpath("//a[@class='oxd-main-menu-item'][.//span[text()='Time']]");
     By recruitmentModule = By.xpath("//a[@class='oxd-main-menu-item'][.//span[text()='Recruitment']]");
     By dashboardModule = By.xpath("//a[@class='oxd-main-menu-item'][.//span[text()='Dashboard']]");
+    By header = By.xpath("//h6[@class='oxd-text oxd-text--h6 oxd-topbar-header-breadcrumb-module']");
 
     // Elements
     WebElement AdminModuleElement;
@@ -24,6 +25,7 @@ public class Navbar {
     WebElement timeModuleElement;
     WebElement recruitmentModuleElement;
     WebElement dashboardModuleElement;
+    WebElement headerElement;
 
 
     // constructor
@@ -74,8 +76,11 @@ public class Navbar {
         Helper.click(dashboardModuleElement);
     }
 
-
-
-
+    public String getHeader()
+    {
+        // get the header text
+        headerElement = navbarDriver.findElement(header);
+        return headerElement.getText();
+    }
 
 }

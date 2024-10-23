@@ -30,6 +30,9 @@ public class Helper {
         return new WebDriverWait(driver, Duration.ofSeconds(seconds)).until(ExpectedConditions.elementToBeClickable(element));
     }
 
+    public static WebElement waitForElementToBeVisible(WebDriver driver, By locator, int seconds) {
+        return new WebDriverWait(driver, Duration.ofSeconds(seconds)).until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
 
     public static void waitForLoaderToDisappear(WebDriver driver, By loaderLocator, int timeoutInSeconds) {
         Wait<WebDriver> wait = new FluentWait<>(driver)

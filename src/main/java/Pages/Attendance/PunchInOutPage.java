@@ -14,8 +14,6 @@ public class PunchInOutPage {
     // locators
     By attendanceMenu = By.xpath("//span[contains(text(),'Attendance ')]");
     By punchInOut = By.xpath("//a[contains(text(),'Punch In/Out')]");
-    By date = By.xpath("//div[@class='oxd-date-input']/input");
-    //By time = By.xpath("//div[@class='oxd-time-input']/input");
     By timeIcon = By.xpath("//i[@class='oxd-icon bi-clock oxd-time-input--clock']");
     By hourTimeArrowDown = By.xpath("//div[@class='oxd-time-hour-input']/input/following-sibling::i");
     By note = By.xpath("//textarea");
@@ -27,8 +25,6 @@ public class PunchInOutPage {
     // elements
     WebElement attendanceMenuElement;
     WebElement punchInOutElement;
-    WebElement dateElement;
-    WebElement timeElement;
     WebElement timeIconElement;
     WebElement hourTimeArrowDownElement;
     WebElement noteElement;
@@ -49,13 +45,6 @@ public class PunchInOutPage {
         Helper.click(attendanceMenuElement);
         punchInOutElement = punchInOutDriver.findElement(punchInOut);
         Helper.click(punchInOutElement);
-    }
-
-    private void enterDate(String date){
-        dateElement = punchInOutDriver.findElement(this.date);
-        Helper.clear(dateElement);
-        Helper.wait(punchInOutDriver,10);
-        Helper.sendKeys(dateElement, date);
     }
 
     private void enterTime() {
@@ -98,7 +87,6 @@ public class PunchInOutPage {
     }
 
     public void punchInOut(boolean in){
-//Helper.wait(punchInOutDriver,10);
         if(in){
             enterTime();
             clickArrowDown();

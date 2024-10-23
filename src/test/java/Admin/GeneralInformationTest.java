@@ -11,11 +11,7 @@ public class GeneralInformationTest extends BaseTest
     GeneralInformationPage generalInformationPage;
     String SuccessMessage = "Success\nSuccessfully Updated";
     Navbar navbar;
-    @BeforeTest
-    public void SetUpUsersPage ()
-    {
-        super.setUp();
-    }
+
 
     @DataProvider (name = "EditOrganizationDetails")
     public Object[][] EditOrganizationDetailsData() {

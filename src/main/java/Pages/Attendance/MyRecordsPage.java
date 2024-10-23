@@ -1,6 +1,5 @@
 package Pages.Attendance;
 
-import Pages.NavBar.Navbar;
 import TestHelpers.Helper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,16 +13,12 @@ public class MyRecordsPage {
 
     // Locators
     By attendanceMenu = By.xpath("//span[contains(text(),'Attendance ')]");
-    By myRecordAttendance = By.xpath("//a[contains(text(),\"My Records\")]");
-    By attendanceDate = By.xpath("//div[@class='oxd-date-input']/input[@class='oxd-input oxd-input--active']");
-    By viewButton = By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary']");
+    By myRecordAttendance = By.xpath("//a[contains(text(),'My Records')]");
     By tableData = By.xpath("//div[@class='oxd-table-row oxd-table-row--with-border']");
 
     // Elements
     WebElement attendanceMenuElement;
     WebElement myRecordAttendanceElement;
-    WebElement attendanceDateElement;
-    WebElement viewButtonElement;
     List<WebElement> tableDataElements;
 
     // Constructor
@@ -40,17 +35,6 @@ public class MyRecordsPage {
 
     }
 
-    public void enterAttendanceDate(String date){
-        attendanceDateElement = myRecordsDriver.findElement(attendanceDate);
-        Helper.sendKeys(attendanceDateElement, date);
-        //attendanceDateElement.sendKeys(date);
-    }
-
-    public void clickOnViewButton(){
-        viewButtonElement = myRecordsDriver.findElement(viewButton);
-        Helper.click(viewButtonElement);
-        //viewButtonElement.click();
-    }
 
     public int getTableDataSize(){
         tableDataElements = myRecordsDriver.findElements(tableData);

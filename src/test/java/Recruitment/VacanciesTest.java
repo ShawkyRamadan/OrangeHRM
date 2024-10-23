@@ -12,9 +12,6 @@ public class VacanciesTest extends BaseTest
     VacanciesPage vacanciesPage;
     Navbar navbar;
 
-    @BeforeTest
-    public void setVacanciesPage () { super.setUp();}
-
     @Owner("Maria")
     @Test(dependsOnMethods = "Login.LoginPageTest.validLoginPageTest")
     public void navigateToVacanciesPage(){

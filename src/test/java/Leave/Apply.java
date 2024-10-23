@@ -22,11 +22,6 @@ public class Apply extends BaseTest {
     String cancelLeaveSuccessMessage = "Success\nSuccessfully Updated";
     String WarningMessage = "Warning\nFailed to Submit";
 
-    @BeforeTest
-    public void setUpApplyPage()
-    {
-        super.setUp();
-    }
 
     @DataProvider(name = "ApplyLeave")
     public Object[][] ApplyLeaveData() {
@@ -37,7 +32,7 @@ public class Apply extends BaseTest {
 
     @Owner("Abdelrhman")
     @Issue("https://ahmed22968337.atlassian.net/browse/DEPI235-379")
-    @Test(  testName = "TC-1",
+    @Test(  testName = "TC-Navigate Apply Leave",
             dependsOnMethods = {"Login.LoginPageTest.validLoginPageTest"},
             description = "This test will navigate to the apply leave page"
     )
@@ -51,7 +46,7 @@ public class Apply extends BaseTest {
     }
 
     @Owner("Abdelrhman")
-    @Test(  testName = "TC2-2",
+    @Test(  testName = "TC-Apply Leave",
             dependsOnMethods = "navigateApplyLeave",
             dataProvider = "ApplyLeave",
             description = "This test will apply for a leave"
@@ -68,7 +63,7 @@ public class Apply extends BaseTest {
 
     @Owner("Abdelrhman")
     @Issue("https://ahmed22968337.atlassian.net/browse/DEPI235-71")
-    @Test(  testName = "TC-3",
+    @Test(  testName = "TC-Apply Leave Overlap",
             dependsOnMethods = "applyLeave",
             dataProvider = "ApplyLeave", description = "This test will apply for a leave that overlaps with another leave"
     )
@@ -82,7 +77,7 @@ public class Apply extends BaseTest {
 
 
     @Owner("Abdelrhman")
-    @Test(  testName = "TC-4",
+    @Test(  testName = "TC-Navigate My Leave",
             dependsOnMethods = {"Login.LoginPageTest.validLoginPageTest"},
             description = "This test will navigate to the my leave page"
     )
@@ -93,7 +88,7 @@ public class Apply extends BaseTest {
 
 
     @Owner("Abdelrhman")
-    @Test(  testName = "TC-5",
+    @Test(  testName = "TC-Cancel Leave",
             dependsOnMethods = {"navigateMyLeave"},
             description = "This test will cancel a leave that was applied for"
     )
@@ -107,7 +102,7 @@ public class Apply extends BaseTest {
 
     @Owner("Abdelrhman")
     @Issue("https://ahmed22968337.atlassian.net/browse/DEPI235-72")
-    @Test(  testName = "TC-6",
+    @Test(  testName = "TC-Apply Leave After Cancel",
             dependsOnMethods = {"cancelLeave"},
             dataProvider = "ApplyLeave",
             description = "This test will apply for a leave that overlaps with another leave that is canceled"
