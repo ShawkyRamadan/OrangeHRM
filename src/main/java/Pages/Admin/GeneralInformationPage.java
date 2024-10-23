@@ -11,29 +11,6 @@ public class GeneralInformationPage
     WebDriver GeneralInformationDriver;
 
     // Locators
-    By Admin = By.xpath("//a[@class='oxd-main-menu-item active']");
-
-    /* User Management Page */
-    By UserManagement = By.xpath("//li[@class='--active oxd-topbar-body-nav-tab --parent --visited']");
-    By Users = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link']");
-    By Username = By.xpath("//div//div//div//div//div//div//div//input[@class='oxd-input oxd-input--active']");
-    By UserRole = By.xpath("");
-    By EmployeeName = By.xpath("//input[@placeholder='Type for hints...']");
-    By Status = By.xpath("");
-    By ResetButton = By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--ghost']");
-    By SearchButton = By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']");
-    By AddButton = By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--secondary']");
-    By EditIcon = By.xpath("");
-    By DeleteIcon = By.xpath("");
-
-    /* Jobs Page */
-    By Jobs = By.xpath("//li[@class='--active oxd-topbar-body-nav-tab --parent']");
-    By JobTitles = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'Job Titles')]");
-    By PayGrades = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'Pay Grades')]");
-    By EmploymentStatus = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'Employment Status')]");
-    By JobCategories = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'Job Categories')]");
-    By WorkShifts = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'Work Shifts')]");
-
     /* Organization Page */
     By Organization = By.xpath("//li[@class='oxd-topbar-body-nav-tab --parent']//span[contains(text(),'Organization')]");
     By GeneralInformation = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'General Information')]");
@@ -53,45 +30,10 @@ public class GeneralInformationPage
     By CountryOption = By.xpath("//span[contains(text(), 'Egypt')]");
     By Notes = By.xpath("//textarea");
     By SaveButton = By.xpath("//button[@type='submit']");
-    By Locations = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'Locations')]");
-    By Structure = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'Structure')]");
-
-    /* Qualifications Page */
-    By Qualifications = By.xpath("//li[@class='oxd-topbar-body-nav-tab --parent --visited']");
-    By Skills = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'Skills')]");
-    By Education = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'Education')]");
-    By Licenses = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'Licenses')]");
-    By Languages = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'Languages')]");
-    By Memberships = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'Memberships')]");
-
-    /* Nationalities Page */
-    By Nationalities = By.xpath("//a[@class='oxd-topbar-body-nav-tab-item' and contains(text(),'Nationalities')]");
-
-    /* Corporate Branding Page */
-    By CorporateBranding = By.xpath("//a[@class='oxd-topbar-body-nav-tab-item' and contains(text(),'Corporate Branding')]");
-
-    /* Configuration Page */
-    By Configuration = By.xpath("//span[@class='oxd-topbar-body-nav-tab-item' and contains(text(),'Configuration')]");
-    By EmailConfiguration = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'Email Configuration')]");
-    By EmailSubscriptions = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'Email Subscriptions')]");
-    By Localization = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'Localization')]");
-    By LanguagePackages = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'Language Packages')]");
-    By Modules = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'Modules')]");
-    By SocialMediaAuthentication = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'Social Media Authentication')]");
-    By RegisterOAuthClient = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'Register OAuth Client')]");
-    By LDAPConfiguration = By.xpath("//a[@class='oxd-topbar-body-nav-tab-link' and contains(text(),'LDAP Configuration')]");
+    By message = By.xpath("//div[@id='oxd-toaster_1']/div/div");
+    By messageClose = By.xpath("//div[@id='oxd-toaster_1']/div/div[@class='oxd-toast-close-container']/div");
 
     // Elements
-    WebElement UserManagementElement;
-    WebElement UsersElement;
-    WebElement UsernameElement;
-    WebElement UserRoleElement;
-    WebElement JobsElement;
-    WebElement JobTitlesElement;
-    WebElement PayGradesElement;
-    WebElement EmploymentStatusElement;
-    WebElement JobCategoriesElement;
-    WebElement WorkShiftsElement;
     WebElement OrganizationElement;
     WebElement GeneralInformationElement;
     WebElement EditButtonElement;
@@ -109,33 +51,8 @@ public class GeneralInformationPage
     WebElement CountryElement;
     WebElement NoteElement;
     WebElement SaveButtonElement;
-    WebElement LocationsElement;
-    WebElement StructureElement;
-    WebElement QualificationsElement;
-    WebElement SkillsElement;
-    WebElement EducationElement;
-    WebElement LicensesElement;
-    WebElement LanguagesElement;
-    WebElement MembershipsElement;
-    WebElement NationalitiesElement;
-    WebElement CorporateBrandingElement;
-    WebElement ConfigurationElement;
-    WebElement EmailConfigurationElement;
-    WebElement EmailSubscriptionsElement;
-    WebElement LocalizationElement;
-    WebElement LanguagePackagesElement;
-    WebElement ModulesElement;
-    WebElement SocialMediaAuthenticationElement;
-    WebElement RegisterOAuthClientElement;
-    WebElement LDAPConfigurationElement;
-    WebElement UserRoleMenuElement;
-    WebElement EmployeeNameElement;
-    WebElement StatusMenuElement;
-    WebElement ResetButtonElement;
-    WebElement SearchButtonElement;
-    WebElement AddButtonElement;
-    WebElement DeleteIconElement;
-    WebElement EditIconElement;
+    WebElement messageElement;
+    WebElement messageCloseElement;
 
     // Constructors
     public GeneralInformationPage(WebDriver driver)
@@ -144,18 +61,12 @@ public class GeneralInformationPage
     }
 
     // Methods
-    public void NavigateToUsersPage()
+    public void NavigateToGeneralInformationPage()
     {
         OrganizationElement = GeneralInformationDriver.findElement(Organization);
         Helper.click(OrganizationElement);
         GeneralInformationElement = GeneralInformationDriver.findElement(GeneralInformation);
         Helper.click(GeneralInformationElement);
-    }
-
-    private void SelectUsername()
-    {
-        UsernameElement = GeneralInformationDriver.findElement(Username);
-        Helper.click(UsernameElement);
     }
 
     private void ClickEditButton ()
@@ -164,5 +75,131 @@ public class GeneralInformationPage
         Helper.click(EditButtonElement);
     }
 
+    private void EnterOrganizationName(String organizationName)
+    {
+        OrganizationNameElement = GeneralInformationDriver.findElement(OrganizationName);
+        Helper.clear(OrganizationNameElement);
+        Helper.sendKeys(OrganizationNameElement, organizationName);
+    }
+
+    private void EnterRegistrationNumber(String registrationNumber)
+    {
+        RegistrationNumberElement = GeneralInformationDriver.findElement(RegistrationNumber);
+        Helper.clear(RegistrationNumberElement);
+        Helper.sendKeys(RegistrationNumberElement, registrationNumber);
+    }
+
+    private void EnterTaxID(String taxID)
+    {
+        TaxIDElement = GeneralInformationDriver.findElement(TaxID);
+        Helper.clear(TaxIDElement);
+        Helper.sendKeys(TaxIDElement, taxID);
+    }
+
+    private void EnterPhone(String phone)
+    {
+        PhoneElement = GeneralInformationDriver.findElement(Phone);
+        Helper.clear(PhoneElement);
+        Helper.sendKeys(PhoneElement, phone);
+    }
+
+    private void EnterFax(String fax)
+    {
+        FaxElement = GeneralInformationDriver.findElement(Fax);
+        Helper.clear(FaxElement);
+        Helper.sendKeys(FaxElement, fax);
+    }
+
+    private void EnterEmail(String email)
+    {
+        EmailElement = GeneralInformationDriver.findElement(Email);
+        Helper.clear(EmailElement);
+        Helper.sendKeys(EmailElement, email);
+    }
+
+    private void EnterAddressStreet1(String addressStreet1)
+    {
+        AddressStreet1Element = GeneralInformationDriver.findElement(AddressStreet1);
+        Helper.clear(AddressStreet1Element);
+        Helper.sendKeys(AddressStreet1Element, addressStreet1);
+    }
+
+    private void EnterAddressStreet2(String addressStreet2)
+    {
+        AddressStreet2Element = GeneralInformationDriver.findElement(AddressStreet2);
+        Helper.clear(AddressStreet2Element);
+        Helper.sendKeys(AddressStreet2Element, addressStreet2);
+    }
+
+    private void EnterCity(String city)
+    {
+        CityElement = GeneralInformationDriver.findElement(City);
+        Helper.clear(CityElement);
+        Helper.sendKeys(CityElement, city);
+    }
+
+    private void EnterState(String state)
+    {
+        StateElement = GeneralInformationDriver.findElement(State);
+        Helper.clear(StateElement);
+        Helper.sendKeys(StateElement, state);
+    }
+
+    private void EnterZip(String zip)
+    {
+        ZipElement = GeneralInformationDriver.findElement(Zip);
+        Helper.clear(ZipElement);
+        Helper.sendKeys(ZipElement, zip);
+    }
+
+    private void SelectCountry()
+    {
+        CountryElement = GeneralInformationDriver.findElement(Country);
+        Helper.click(CountryElement);
+        CountryElement = GeneralInformationDriver.findElement(CountryOption);
+        Helper.click(CountryElement);
+    }
+
+    private void EnterNotes(String notes)
+    {
+        NoteElement = GeneralInformationDriver.findElement(Notes);
+        Helper.clear(NoteElement);
+        Helper.sendKeys(NoteElement, notes);
+    }
+
+    private void ClickSaveButton()
+    {
+        SaveButtonElement = GeneralInformationDriver.findElement(SaveButton);
+        Helper.click(SaveButtonElement);
+    }
+
+    public String getMessage() {
+        messageElement = GeneralInformationDriver.findElement(message);
+        return messageElement.getText();
+    }
+
+    public void closeMessage() {
+        messageCloseElement = GeneralInformationDriver.findElement(messageClose);
+        Helper.click(messageCloseElement);
+    }
+
+    public void EditOrganization(String organizationName, String registrationNumber, String taxID, String phone, String fax, String email, String addressStreet1, String addressStreet2, String city, String state, String zip, String notes)
+    {
+        ClickEditButton();
+        EnterOrganizationName(organizationName);
+        EnterRegistrationNumber(registrationNumber);
+        EnterTaxID(taxID);
+        EnterPhone(phone);
+        EnterFax(fax);
+        EnterEmail(email);
+        EnterAddressStreet1(addressStreet1);
+        EnterAddressStreet2(addressStreet2);
+        EnterCity(city);
+        EnterState(state);
+        EnterZip(zip);
+        SelectCountry();
+        EnterNotes(notes);
+        ClickSaveButton();
+    }
 
 }

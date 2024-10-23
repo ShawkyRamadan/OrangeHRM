@@ -120,5 +120,4 @@ public class Apply extends BaseTest {
         Assert.assertEquals(applyPage.getMessage(), SuccessMessage);
         applyPage.closeMessage();
     }
-
 }
