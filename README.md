@@ -1,26 +1,53 @@
-#OrangeHRM GP AUTOMATION DEPI
-This repository contains the software testing project for the DEPI software testing course, focusing on testing the OrangeHRM application. The project includes both manual testing and test automation deliverables.
+# **OrangeHRM GP Automation - DEPI**
 
-##Project Deliverables
+This repository contains the software testing project for the DEPI software testing course, focusing on testing the OrangeHRM application. The project includes both **manual testing** and **test automation deliverables**, designed to ensure the quality and reliability of the OrangeHRM system.
 
-##Manual Testing
+---
 
-Test cases covering various features of OrangeHRM.
-Test cases linked to corresponding user stories on Jira.
-Detailed bug reports with evidence (screenshots/videos), linked to relevant user stories and test cases.
-##Automation Framework
+## **Project Deliverables**
 
-Built using Selenium 4, Java, TestNG, and Maven. 2_ Follows the Page Object Model (POM) design pattern.
-Includes test scripts for automated testing.
-Allure reports with screenshots for pass and fail cases.
-##Test Summary Report
+### **Manual Testing**
+- **Test Cases**: Comprehensive test cases covering various features of OrangeHRM.
+- **User Stories**: Test cases linked to corresponding user stories on Jira.
+- **Bug Reports**: Detailed bug reports with evidence (screenshots/videos), linked to relevant user stories and test cases.
 
-Comprehensive metrics for both manual and automated testing.
-Includes total test cases/scripts, pass/fail rates, and remarks.
-##Test Automation Framework
+### **Automation Framework**
+- Built using **Selenium 4**, **Java**, **TestNG**, and **Maven**.
+- Implements the **Page Object Model (POM)** design pattern.
+- Includes automated test scripts for OrangeHRM functionality.
+- Generates **Allure reports** with screenshots for both pass and fail cases.
 
-Language: Java
-Framework: Selenium 4, TestNG
-Design Pattern: Page Object Model (POM)
-Project Management Tool: Maven
-Report: Allure Reports for detailed test results
+---
+
+## **Test Summary Report**
+- Provides comprehensive metrics for both manual and automated testing.
+- Includes:
+  - Total number of test cases/scripts.
+  - Pass and fail rates.
+  - Additional remarks or observations.
+
+---
+
+## **Test Automation Framework**
+
+| **Aspect**             | **Details**                          |
+|------------------------|--------------------------------------|
+| **Programming Language** | Java                                |
+| **Framework**           | Selenium 4, TestNG                  |
+| **Design Pattern**      | Page Object Model (POM)             |
+| **Build Tool**          | Maven                               |
+| **Reporting Tool**      | Allure Reports                      |
+
+---
+
+## **How to Use the Repository**
+
+### **Prerequisites**
+- **Java Development Kit (JDK)**: Version 8 or higher.
+- **Maven**: To manage dependencies.
+- **Allure**: For detailed test result reports.
+
+### **Steps to Run Automation Tests**
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
