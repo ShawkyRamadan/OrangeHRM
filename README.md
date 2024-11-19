@@ -47,7 +47,12 @@ This repository contains the software testing project for the DEPI software test
 - **Maven**: To manage dependencies.
 - **Allure**: For detailed test result reports.
 
-### **Steps to Run Automation Tests**
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
+### **Project Management Tool**
+- **Jira**: Used for managing user stories, linking test cases, and tracking bugs.
+  
+---
+
+### **Contributing**
+Contributions are welcome! If you have suggestions or improvements, please fork the repository and submit a pull request.
+
+
